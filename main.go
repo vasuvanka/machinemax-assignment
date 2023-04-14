@@ -38,6 +38,7 @@ func main() {
 	devEUIs, err := utils.GenerateDevEUIBatch(DevEUIBatchSize)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error while generating DevEUI Batch")
+		return
 	}
 
 	var wg sync.WaitGroup
